@@ -1,106 +1,136 @@
-# 🛒 GreenCart – Online Grocery Store
+# 🛒 GreenCart — Online Grocery Store
 
-GreenCart is a **full-stack MERN (MongoDB, Express, React, Node.js)** online grocery store application.
+**GreenCart** is a full-stack **MERN-based online grocery shopping application** that allows customers to browse products, manage their cart, save delivery addresses, and place orders using **Cash on Delivery (COD)** or **Stripe Online Payments**.
 
-Users can browse grocery products, manage their shopping cart, save delivery addresses, and place orders using **Cash on Delivery (COD)** or **Stripe Online Payments**.
-
-The application also provides a **Seller/Admin Dashboard** where the seller can add, edit, and delete products and view customer orders.
+The application also includes a secure **Seller/Admin Dashboard** where sellers can manage products, upload product images, and monitor customer orders.
 
 ---
 
 ## 🌐 Live Demo
 
-### 👤 User / Customer Website
-
-[https://greencart-frontend-xld9.onrender.com/](https://greencart-frontend-xld9.onrender.com/)
-
-### 🛍️ Seller / Admin Dashboard
-
-[https://greencart-frontend-xld9.onrender.com/seller](https://greencart-frontend-xld9.onrender.com/seller)
-
-### ⚙️ Backend API
-
-[https://greencart-backend-72un.onrender.com](https://greencart-backend-72un.onrender.com)
+| Platform             | Link                                                |
+| -------------------- | --------------------------------------------------- |
+| 👤 Customer Website  | https://greencart-frontend-xld9.onrender.com/       |
+| 🛍️ Seller Dashboard | https://greencart-frontend-xld9.onrender.com/seller |
+| ⚙️ Backend API       | https://greencart-backend-72un.onrender.com         |
 
 ---
 
-## 🔑 Seller / Admin Login
+## 🔑 Demo Seller Account
 
-### Seller Login
+Use the following credentials to access the Seller Dashboard:
 
-[https://greencart-frontend-xld9.onrender.com/seller](https://greencart-frontend-xld9.onrender.com/seller)
-
-**Email:**
+**Email**
 
 ```text
 admin@example.com
+```
 
-**Password:**
+**Password**
 
 ```text
 greatstack123
 ```
 
-> These credentials are provided for demo/testing purposes.
+> These credentials are provided only for demonstration and testing purposes.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 👤 User Features
+## 👤 Customer Features
 
-* User registration and login
-* JWT authentication using cookies
-* Browse grocery products
-* Browse products by category
-* Product details
-* Related products
-* Add products to cart
-* Increase/decrease product quantity
-* Remove products from cart
-* Save delivery addresses
-* Cash on Delivery (COD)
-* Stripe online payment
-* Stripe webhook payment updates
-* View order history
-* View payment status
+* 🔐 User Registration & Login
+* 🍎 Browse grocery products
+* 📂 Browse products by category
+* 🔎 Product details
+* 🔗 Related products
+* 🛒 Add products to cart
+* ➕ Increase product quantity
+* ➖ Decrease product quantity
+* 🗑️ Remove products from cart
+* 📍 Save and manage delivery addresses
+* 💵 Cash on Delivery (COD)
+* 💳 Stripe Online Payment
+* 🔔 Stripe Webhook payment verification
+* 📦 Place orders
+* 📋 View order history
+* 💰 View payment status
+* 🚪 Secure logout
 
-### 🛍️ Seller/Admin Features
+## 🛍️ Seller/Admin Features
 
-* Seller/Admin login
-* Secure seller authentication
-* Seller dashboard
-* Add products
-* Edit products
-* Delete products
-* Upload product images
-* Cloudinary image storage
-* View product list
-* View customer orders
-* View order/payment status
-
----
-
-## 🛠️ Tech Stack
-
-| Layer          | Technology          |
-| -------------- | ------------------- |
-| Frontend       | React.js, Vite      |
-| Styling        | Tailwind CSS        |
-| Backend        | Node.js, Express.js |
-| Database       | MongoDB Atlas       |
-| ODM            | Mongoose            |
-| Authentication | JWT + HTTP Cookies  |
-| Image Storage  | Cloudinary          |
-| Payment        | Stripe              |
-| HTTP Client    | Axios               |
-| Notifications  | React Hot Toast     |
-| Routing        | React Router        |
-| Hosting        | Render              |
+* 🔐 Secure Seller Authentication
+* 📊 Seller Dashboard
+* ➕ Add new products
+* ✏️ Edit existing products
+* 🗑️ Delete products
+* 🖼️ Upload product images
+* ☁️ Cloudinary image storage
+* 📦 View product inventory
+* 📋 View customer orders
+* 💳 Monitor order/payment status
 
 ---
 
-## 📁 Project Structure
+# 🛠️ Tech Stack
+
+| Category       | Technologies            |
+| -------------- | ----------------------- |
+| Frontend       | React.js, Vite          |
+| Styling        | Tailwind CSS            |
+| Backend        | Node.js, Express.js     |
+| Database       | MongoDB Atlas           |
+| ODM            | Mongoose                |
+| Authentication | JWT + HTTP-Only Cookies |
+| Image Storage  | Cloudinary              |
+| Payments       | Stripe                  |
+| HTTP Client    | Axios                   |
+| Notifications  | React Hot Toast         |
+| Routing        | React Router            |
+| Deployment     | Render                  |
+
+---
+
+# 🏗️ Application Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │      Customer       │
+                    │      Browser        │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   React + Vite      │
+                    │    Frontend         │
+                    └──────────┬──────────┘
+                               │
+                         Axios / API
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Express + Node    │
+                    │      Backend        │
+                    └──────┬───────┬──────┘
+                           │       │
+                ┌──────────┘       └──────────┐
+                ▼                             ▼
+       ┌─────────────────┐          ┌─────────────────┐
+       │ MongoDB Atlas   │          │   Cloudinary    │
+       │   Database      │          │ Product Images  │
+       └─────────────────┘          └─────────────────┘
+                           │
+                           ▼
+                    ┌─────────────────┐
+                    │     Stripe      │
+                    │    Payments     │
+                    └─────────────────┘
+```
+
+---
+
+# 📁 Project Structure
 
 ```text
 greencart-main/
@@ -139,23 +169,29 @@ greencart-main/
 
 ---
 
-## 🔐 Environment Variables
+# 🔐 Environment Variables
 
-### Frontend `.env`
+## Frontend
+
+Create a `.env` file inside the `client` folder:
 
 ```env
 VITE_BACKEND_URL=http://localhost:8000
 VITE_CURRENCY='$'
 ```
 
-### Production Frontend
+### Production
 
 ```env
 VITE_BACKEND_URL=https://greencart-backend-72un.onrender.com
 VITE_CURRENCY='$'
 ```
 
-### Backend `.env`
+---
+
+## Backend
+
+Create a `.env` file inside the `server` folder:
 
 ```env
 PORT=8000
@@ -175,23 +211,31 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
 ```
 
-> ⚠️ Never commit `.env` files containing real passwords, API keys, database credentials, or secrets to GitHub.
+> ⚠️ **Security:** Never commit `.env` files containing real passwords, database credentials, API keys, or secret keys to GitHub.
 
 ---
 
-## 🚀 Run Project Locally
+# 🚀 Getting Started
 
-### 1. Clone Repository
+Follow these steps to run GreenCart locally.
+
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/shubhamshrivastav1/greencart-main.git
 ```
 
+Navigate into the project:
+
 ```bash
 cd greencart-main
 ```
 
-### 2. Backend Setup
+---
+
+## 2️⃣ Backend Setup
+
+Navigate to the server folder:
 
 ```bash
 cd server
@@ -203,23 +247,25 @@ Install dependencies:
 npm install
 ```
 
-Create a `.env` file and add the required environment variables.
+Create a `.env` file and configure the required environment variables.
 
-Start the backend:
+Start the backend server:
 
 ```bash
 npm run server
 ```
 
-Backend:
+Backend will run on:
 
 ```text
 http://localhost:8000
 ```
 
-### 3. Frontend Setup
+---
 
-Open another terminal:
+## 3️⃣ Frontend Setup
+
+Open a new terminal and navigate to the client folder:
 
 ```bash
 cd client
@@ -231,42 +277,42 @@ Install dependencies:
 npm install
 ```
 
-Create `.env`:
+Create the `.env` file:
 
 ```env
 VITE_BACKEND_URL=http://localhost:8000
 VITE_CURRENCY='$'
 ```
 
-Start frontend:
+Start the frontend:
 
 ```bash
 npm run dev
 ```
 
-Frontend:
+Frontend will run on:
 
 ```text
-http://localhost:5173/
+http://localhost:5173
 ```
 
 ---
 
-## 🔗 Local URLs
+# 🔗 Local URLs
 
-### User Website
+### 👤 Customer Website
 
 ```text
 http://localhost:5173/
 ```
 
-### Seller/Admin Website
+### 🛍️ Seller Dashboard
 
 ```text
 http://localhost:5173/seller
 ```
 
-### Backend API
+### ⚙️ Backend
 
 ```text
 http://localhost:8000
@@ -274,9 +320,9 @@ http://localhost:8000
 
 ---
 
-## 🔒 Authentication
+# 🔒 Authentication
 
-GreenCart uses **JWT-based authentication with HTTP-only cookies**.
+GreenCart uses **JWT-based authentication with HTTP-only cookies** to securely authenticate users and sellers.
 
 ### User Authentication
 
@@ -286,179 +332,222 @@ Users can:
 * Login
 * Logout
 * Check authentication status
+* Access protected user functionality
 
 ### Seller Authentication
 
 Seller authentication uses:
 
-* JWT
+* JWT tokens
 * HTTP-only cookies
-* Environment variables for seller credentials
-* Seller authentication middleware
+* Environment-based seller credentials
+* Authentication middleware
 
-Protected seller routes verify the `sellerToken` cookie before allowing access.
-
----
-
-## 🖼️ Image Management
-
-Product images are uploaded and stored using **Cloudinary**.
-
-The application uses Cloudinary instead of storing product images directly on the backend server.
+Protected seller routes verify the `sellerToken` cookie before allowing access to seller functionality.
 
 ---
 
-## 📦 Order Flow
+# 🖼️ Image Management
+
+GreenCart uses **Cloudinary** for product image storage.
+
+Instead of storing product images directly on the backend server:
+
+```text
+Seller
+   ↓
+Upload Product Image
+   ↓
+Backend
+   ↓
+Cloudinary
+   ↓
+Image URL
+   ↓
+MongoDB Product
+```
+
+This allows product images to be stored and served through a dedicated cloud image-storage service.
+
+---
+
+# 📦 Order Flow
 
 ```text
 User
-  ↓
+  │
+  ▼
 Browse Products
-  ↓
-Add to Cart
-  ↓
+  │
+  ▼
+Add Products to Cart
+  │
+  ▼
 Add Delivery Address
-  ↓
+  │
+  ▼
 Checkout
-  ↓
-COD / Stripe Payment
-  ↓
-Order Created
-  ↓
-Seller Views Order
+  │
+  ├───────────────┐
+  ▼               ▼
+COD           Stripe Payment
+  │               │
+  └───────┬───────┘
+          ▼
+     Order Created
+          │
+          ▼
+   Seller Views Order
 ```
 
 ---
 
-## 💳 Stripe Payment Flow
+# 💳 Stripe Payment Flow
+
+For online payments, GreenCart integrates Stripe Checkout and webhook-based payment updates.
 
 ```text
 User
-  ↓
+  │
+  ▼
 Checkout
-  ↓
+  │
+  ▼
 Stripe Checkout
-  ↓
+  │
+  ▼
 Payment
-  ↓
+  │
+  ▼
 Stripe Webhook
-  ↓
+  │
+  ▼
 Backend
-  ↓
+  │
+  ▼
 Update Order Payment Status
 ```
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-### 👤 User Side
+## 👤 Customer Side
 
-#### Home Page
+### 🏠 Home Page
 
 ![Home Page](client/src/assets/Home.JPG)
 
-#### All Products
+### 🛍️ All Products
 
 ![All Products](client/src/assets/all-products_page.JPG)
 
-#### Product Details
+### 📦 Product Details
 
 ![Product Details](client/src/assets/product_page.JPG)
 
-#### Related Products
+### 🔗 Related Products
 
 ![Related Products](client/src/assets/related-product_page.JPG)
 
-#### Cart
+### 🛒 Shopping Cart
 
 ![Cart](client/src/assets/cart_page.JPG)
 
-#### Sign Up
+### 📝 Sign Up
 
 ![Sign Up](client/src/assets/sign-up_page.JPG)
 
-#### Login
+### 🔐 Login
 
 ![Login](client/src/assets/login_page.JPG)
 
-#### My Orders
+### 📦 My Orders
 
 ![My Orders](client/src/assets/my-orders_page.JPG)
 
 ---
 
-### 🛍️ Seller/Admin Side
+## 🛍️ Seller/Admin Side
 
-#### Seller Login
+### 🔐 Seller Login
 
 ![Seller Login](client/src/assets/seller-login_page.JPG)
 
-#### Seller Dashboard
+### 📊 Seller Dashboard
 
 ![Seller Dashboard](client/src/assets/seller-home_page.JPG)
 
-#### Seller Product List
+### 📦 Product Management
 
 ![Seller Product List](client/src/assets/seller-productlist_page.JPG)
 
-#### Seller Orders
+### 📋 Customer Orders
 
 ![Seller Orders](client/src/assets/seller-orders_page.JPG)
 
 ---
 
-## ☁️ Deployment
+# ☁️ Deployment
 
-The application is deployed on **Render**.
+GreenCart is deployed using **Render**.
 
 ### Frontend
 
-[https://greencart-frontend-xld9.onrender.com/](https://greencart-frontend-xld9.onrender.com/)
-
-### Seller/Admin
-
-[https://greencart-frontend-xld9.onrender.com/seller](https://greencart-frontend-xld9.onrender.com/seller)
-
-### Backend
-
-[https://greencart-backend-72un.onrender.com](https://greencart-backend-72un.onrender.com)
-
----
-
-## 🔮 Future Improvements
-
-* Product search
-* Product reviews and ratings
-* Wishlist
-* Coupon and discount system
-* Order tracking
-* Sales analytics
-* Revenue dashboard
-* Stock notifications
-* Multiple seller accounts
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-## 👨‍💻 Author
-
-### Shubham Shrivastav
-
-GitHub:
-
-[https://github.com/shubhamshrivastav1](https://github.com/shubhamshrivastav1)
-
----
-
-## ⭐ Support
-
-If you like this project, please give it a ⭐ on GitHub.
-
+```text
+https://greencart-frontend-xld9.onrender.com/
 ```
+
+### Seller Dashboard
+
+```text
+https://greencart-frontend-xld9.onrender.com/seller
 ```
+
+### Backend API
+
+```text
+https://greencart-backend-72un.onrender.com
+```
+
+---
+
+# 🔮 Future Improvements
+
+Some planned improvements include:
+
+* 🔎 Product search
+* ⭐ Product reviews and ratings
+* ❤️ Wishlist
+* 🏷️ Coupon and discount system
+* 🚚 Order tracking
+* 📊 Sales analytics
+* 💰 Revenue dashboard
+* 📦 Stock notifications
+* 👥 Multiple seller accounts
+* 📱 Improved mobile responsiveness
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👨‍💻 Author
+
+## Shubham Shrivastav
+
+Full-Stack Developer | MERN Stack Developer
+
+**GitHub:**
+https://github.com/shubhamshrivastav1
+
+---
+
+# ⭐ Support
+
+If you found this project useful or interesting, please consider giving the repository a **⭐ Star** on GitHub.
+
+Your support is greatly appreciated! ❤️
