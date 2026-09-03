@@ -1,4 +1,3 @@
-````markdown
 # 🛒 GreenCart – Online Grocery Store
 
 GreenCart is a **full-stack MERN (MongoDB, Express, React, Node.js)** online grocery store application.
@@ -35,7 +34,6 @@ The application also provides a **Seller/Admin Dashboard** where the seller can 
 
 ```text
 admin@example.com
-````
 
 **Password:**
 
